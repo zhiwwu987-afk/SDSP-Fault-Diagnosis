@@ -65,8 +65,7 @@ To run the ECC experiments (`SDSP_ECC_test.ipynb`), please follow these steps:
 git clone https://github.com/zhiwwu987-afk/SDSP-Fault-Diagnosis.git
 cd SDSP-Fault-Diagnosis
 
-
-**2. Use the SDSP module in your own project:**
+2. Use the SDSP module in your own project:
 You can easily import and apply our protocol to your own time-series tasks to ensure a strict and fair evaluation:
 
 from sdsp_protocol import sdsp_split
@@ -81,15 +80,13 @@ train_idx, val_idx, test_idx = sdsp_split(
 )
 
 
-**📝 Citation**
+📝 Citation
 If you find our protocol, code, or evaluation metrics (LIF, ΔGap) helpful in your research, please cite our paper:
 
 @article{
   title={Temporal Leakage in Windowed Time-Series Classification: Systematic Evaluation Bias and a Standardized Splitting Protocol for Fault Diagnosis}
 }
 
-
-**📜 License**
+📜 License
 This project is licensed under the MIT License - see the LICENSE file for details.
----
 
