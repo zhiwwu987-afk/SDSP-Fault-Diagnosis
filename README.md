@@ -46,6 +46,7 @@ This project utilizes two distinct datasets. Each raw signal file is truncated t
 For convenience, the required subset of the Case Western Reserve University (CWRU) dataset (sampled at 12 kHz) is **included directly in this repository**. 
 - Location: `data/` (e.g., `data/0_0.mat`, `data/7_1.mat`, etc.)
 - You can run `SDSP_CWRU_test.ipynb` immediately without additional data downloading.
+<img width="1105" height="280" alt="image" src="https://github.com/user-attachments/assets/eb4c29e5-5b4a-403d-ba13-dd4b427420a5" />
 
 ### 2. UM-GearEcc Dataset (External Download Required)
 Due to GitHub's file size limitations, the UM-GearEcc dataset (sampled at 51.2 kHz) is not included in this repository. 
@@ -53,6 +54,7 @@ To run the ECC experiments (`SDSP_ECC_test.ipynb`), please follow these steps:
 1. Download the raw dataset from the official repository: [UM-GearEccDataset](https://github.com/LeeJMJM/UM-GearEccDataset).
 2. Extract the downloaded files.
 3. Place the required `.mat` files into the appropriate path as specified in the `SDSP_ECC_test.ipynb` notebook (e.g., `data/ECC/` or your custom local directory).
+<img width="818" height="322" alt="image" src="https://github.com/user-attachments/assets/09b0211d-7552-4b9c-930d-d85857057e16" />
 
 ---
 
@@ -62,10 +64,9 @@ To run the ECC experiments (`SDSP_ECC_test.ipynb`), please follow these steps:
 ```bash
 git clone https://github.com/zhiwwu987-afk/SDSP-Fault-Diagnosis.git
 cd SDSP-Fault-Diagnosis
----
+
 
 **2. Use the SDSP module in your own project:**
-```bash
 You can easily import and apply our protocol to your own time-series tasks to ensure a strict and fair evaluation:
 
 from sdsp_protocol import sdsp_split
@@ -78,19 +79,17 @@ train_idx, val_idx, test_idx = sdsp_split(
     safety_gap=0.05, # \Delta T in seconds
     sampling_rate=51200
 )
----
+
 
 **📝 Citation**
-```bash
 If you find our protocol, code, or evaluation metrics (LIF, ΔGap) helpful in your research, please cite our paper:
 
 @article{
   title={Temporal Leakage in Windowed Time-Series Classification: Systematic Evaluation Bias and a Standardized Splitting Protocol for Fault Diagnosis}
 }
----
+
 
 **📜 License**
-```bash
 This project is licensed under the MIT License - see the LICENSE file for details.
 ---
 
