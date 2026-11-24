@@ -12,6 +12,7 @@ Official repository for the paper: **"Temporal Leakage in Windowed Time-Series C
 With the rapid development of deep learning in continuous time-series analysis, high test accuracy is often regarded as strong evidence of a model's powerful detection and diagnostic capabilities. However, this conclusion holds **only if the test set is strictly blind and free from data leakage**. 
 
 Currently, there is a lack of systematic research on how time-series data splitting methods affect the true performance of models. Using vibration-based fault diagnosis as a representative scenario, this study systematically investigates how random splitting of overlapping sliding windows leads to temporal data leakage, thereby causing an artificial inflation of apparent model performance.
+<img width="758" height="397" alt="image" src="https://github.com/user-attachments/assets/52bdfda9-6bcd-424d-bafb-ea66f3396992" />
 
 To address this evaluation limitation, we propose the **Standardized Data Splitting Protocol (SDSP)**. By enforcing block-level temporal isolation and a safety gap ($$\Delta T$$), while preserving intra-set overlap for data augmentation, SDSP explicitly decouples evaluation integrity from sample expansion at the operational level. 
 
@@ -20,6 +21,7 @@ To address this evaluation limitation, we propose the **Standardized Data Splitt
 - **SDSP Framework**: A plug-and-play data splitting protocol that guarantees zero temporal leakage across training, validation, and test sets.
 - **Quantitative Metrics**: Introduces the Leakage Impact Factor ($$LIF$$) and Generalization Deception Degree ($$\Delta Gap$$) as supplementary metrics to quantify a model's vulnerability to temporal redundancy.
 - **Model-Agnostic**: The core implementation (`sdsp_protocol.py`) is fully decoupled from specific deep learning architectures and can be easily adapted to other time-series tasks.
+<img width="636" height="530" alt="image" src="https://github.com/user-attachments/assets/2d9181f1-234b-4e9f-8fbc-70f1a1ef8b97" />
 
 ---
 
@@ -61,7 +63,7 @@ To run the ECC experiments (`SDSP_ECC_test.ipynb`), please follow these steps:
 git clone https://github.com/zhiwwu987-afk/SDSP-Fault-Diagnosis.git
 cd SDSP-Fault-Diagnosis
 
-2. Use the SDSP module in your own project:
+**2. Use the SDSP module in your own project:**
 You can easily import and apply our protocol to your own time-series tasks to ensure a strict and fair evaluation:
 
 from sdsp_protocol import sdsp_split
@@ -75,7 +77,7 @@ train_idx, val_idx, test_idx = sdsp_split(
     sampling_rate=51200
 )
 
-📝 Citation
+**📝 Citation**
 If you find our protocol, code, or evaluation metrics (LIF, ΔGap) helpful in your research, please cite our paper:
 
 @article{
